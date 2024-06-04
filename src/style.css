@@ -1,0 +1,89 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-box: darkgreen;
+  --color-box-anim-10: rgba(0, 100, 0, 0.5);
+  --anim-duration: 3s;
+  --anim-delay: 4s;
+
+  --box-width-anim-6: 15px;
+  --box-height-anim-6: 15px;
+  --box-gap-anim-6: 5px;
+}
+
+#outline {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid yellow;
+}
+
+#app-wrapper {
+  width: 100%;
+  min-height: calc(100vh);
+  background-color: var(--color-black);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--box-gap-anim-6);
+  align-content: flex-start;
+  overflow: hidden;
+}
+
+.box {
+  width: var(--box-width-anim-6);
+  height: var(--box-height-anim-6);
+  background-color: var(--color-black);
+  animation:
+          animation6 var(--anim-duration) linear var(--anim-delay) forwards,
+          blackBackground var(--anim-delay) linear calc(var(--anim-delay) + var(--anim-duration)) forwards;
+}
+
+#app-wrapper.animation {
+  animation: whiteBackground var(--anim-duration) linear var(--anim-delay);
+}
+
+@keyframes whiteBackground {
+  0% {
+    background-color: var(--color-white);
+  }
+  100% {
+    background-color: var(--color-white);
+  }
+}
+
+@keyframes blackBackground {
+  0% {
+    background-color: var(--color-black);
+  }
+  100% {
+    background-color: var(--color-black);
+  }
+}
+
+@keyframes animation6 {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(0.5);
+    background-color: var(--color-box);
+  }
+  20% {
+    transform: translateX(500px) rotate(360deg) scale(1);
+  }
+  50% {
+    transform: translateX(500px) translateY(600px) rotate(0deg) scale(1.5);
+  }
+  75% {
+    transform: translateX(0) translateY(600px) rotate(-360deg) scale(1);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(-360deg) scale(0.5);
+    background-color: var(--color-box);
+  }
+}
