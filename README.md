@@ -1,6 +1,6 @@
 # Analysis and measurement of CSS animation performance for selected web browsers
 
-This repository contains description of my Master's thesis on analysis and measurement of CSS animation performance for selected web browsers. This topic allowed me to acquire deeper knowledge of CSS animations, both 2D and 3D, browser components and inner-working of browser engines. I was also able to understand which browsers are the most performant in terms of displaying CSS animations.
+My Master's thesis on analysis and measurement of CSS animation performance for selected web browsers. This topic allowed me to acquire deeper knowledge of CSS animations, both 2D and 3D, browser components and inner-working of browser engines. I was also able to understand which browsers are the most performant in terms of displaying CSS animations.
 
 A summary of the thesis can be found below. For demo purposes I selected two animations out of ten presented in the full thesis: Animation 6 and 10.
 
